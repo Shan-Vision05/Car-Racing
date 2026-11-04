@@ -29,12 +29,9 @@ htmlcov/
 *.swp
 .DS_Store
 
-# Training artifacts. The small CartPole weights under
-# agents/cartpole/checkpoints/ are tracked so the watcher can run
-# without a training pass.
+# Training artifacts
 *.pt
 *.pth
 runs/
 wandb/
 *.log
-!agents/cartpole/checkpoints/*.pt

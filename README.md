@@ -13,7 +13,7 @@ agents/
     train.py              policy-gradient training
     watch.py              render a saved policy
     baselines/            random rollouts, before any learning
-    checkpoints/          saved weights (best.pt, last.pt)
+    checkpoints/          local weights (best.pt, last.pt), not committed
 ```
 
 ## Setup
@@ -46,13 +46,11 @@ Train the actor-critic. It evaluates every 25 episodes, keeps the best weights, 
 python -m agents.cartpole.train
 ```
 
-Watch the saved policy. This opens a window and prefers `best.pt`, then `last.pt`.
+Watch the saved policy. This opens a window and prefers `best.pt`, then `last.pt`. Train first; those files stay on your machine.
 
 ```bash
 python -m agents.cartpole.watch
 ```
-
-Checked-in weights are a trained CartPole policy so watching works before you train. A new training run overwrites them.
 
 ## Adding an agent
 
